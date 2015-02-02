@@ -1,4 +1,4 @@
-<?php
+ <?php
    /*
    Plugin Name: Woocommerce Custom Subscription Fields
    Plugin URI: http://www.bobbiejwilson.com/woocommerce-custom-subscription-fields
@@ -20,7 +20,6 @@ class WC_Custom_Sub {
 		
 		// Display on the front end
 		add_action( 'woocommerce_after_add_to_cart_button', array( $this, 'facility_name_html' ), 10 );
-
 		// Filters for cart actions
 		add_filter( 'woocommerce_add_cart_item_data', array( $this, 'add_cart_item_data' ), 10, 8 );
 		add_filter( 'woocommerce_get_cart_item_from_session', array( $this, 'get_cart_item_from_session' ), 10, 8 );
@@ -40,98 +39,38 @@ class WC_Custom_Sub {
 	 */
 	public function facility_name_html() {
 		global $post; ?>
-		<fieldset id="facility_1">
-			<label for="facility_name_1">Facility Name:<br></label>
-			<input type="text" name="facility_name_1" id="facility_name_1" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_1" id="facility_addr_1" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_1" id="facility_city_1" value="" placeholder="City" />
-			<label for="facility_state_1">State</label>
-			<input type="text" name="facility_state_1" id="facility_state_1" value="" />
-			<input type="text" name="facility_zip_1" id="facility_zip_1" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_8">
-			<label for="facility_name_8">Facility Name:<br></label>
-			<input type="text" name="facility_name_8" id="facility_name_8" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_8" id="facility_addr_8" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_8" id="facility_city_8" value="" placeholder="City" />
-			<label for="facility_state_8">State</label>
-			<input type="text" name="facility_state_8" id="facility_state_8" value="" />
-			<input type="text" name="facility_zip_8" id="facility_zip_8" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_3">
-			<label for="facility_name_3">Facility Name:<br></label>
-			<input type="text" name="facility_name_3" id="facility_name_3" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_3" id="facility_addr_3" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_3" id="facility_city_3" value="" placeholder="City" />
-			<label for="facility_state_3">State</label>
-			<input type="text" name="facility_state_3" id="facility_state_3" value="" />
-			<input type="text" name="facility_zip_3" id="facility_zip_3" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_4">
-			<label for="facility_name_4">Facility Name:<br></label>
-			<input type="text" name="facility_name_4" id="facility_name_4" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_4" id="facility_addr_4" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_4" id="facility_city_4" value="" placeholder="City" />
-			<label for="facility_state_4">State</label>
-			<input type="text" name="facility_state_4" id="facility_state_4" value="" />
-			<input type="text" name="facility_zip_4" id="facility_zip_4" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_5">
-			<label for="facility_name_5">Facility Name:<br></label>
-			<input type="text" name="facility_name_5" id="facility_name_5" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_5" id="facility_addr_5" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_5" id="facility_city_5" value="" placeholder="City" />
-			<label for="facility_state_5">State</label>
-			<input type="text" name="facility_state_5" id="facility_state_5" value="" />
-			<input type="text" name="facility_zip_5" id="facility_zip_5" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_6">
-			<label for="facility_name_6">Facility Name:<br></label>
-			<input type="text" name="facility_name_6" id="facility_name_6" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_6" id="facility_addr_6" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_6" id="facility_city_6" value="" placeholder="City" />
-			<label for="facility_state_6">State</label>
-			<input type="text" name="facility_state_6" id="facility_state_6" value="" />
-			<input type="text" name="facility_zip_6" id="facility_zip_6" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_7">
-			<label for="facility_name_7">Facility Name:<br></label>
-			<input type="text" name="facility_name_7" id="facility_name_7" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_7" id="facility_addr_7" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_7" id="facility_city_7" value="" placeholder="City" />
-			<label for="facility_state_7">State</label>
-			<input type="text" name="facility_state_7" id="facility_state_7" value="" />
-			<input type="text" name="facility_zip_7" id="facility_zip_7" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_8">
-			<label for="facility_name_8">Facility Name:<br></label>
-			<input type="text" name="facility_name_8" id="facility_name_8" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_8" id="facility_addr_8" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_8" id="facility_city_8" value="" placeholder="City" />
-			<label for="facility_state_8">State</label>
-			<input type="text" name="facility_state_8" id="facility_state_8" value="" />
-			<input type="text" name="facility_zip_8" id="facility_zip_8" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_9">
-			<label for="facility_name_9">Facility Name:<br></label>
-			<input type="text" name="facility_name_9" id="facility_name_9" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_9" id="facility_addr_9" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_9" id="facility_city_9" value="" placeholder="City" />
-			<label for="facility_state_9">State</label>
-			<input type="text" name="facility_state_9" id="facility_state_9" value="" />
-			<input type="text" name="facility_zip_9" id="facility_zip_9" value="" placeholder="Zip Code"/>
-		</fieldset>
-		<fieldset id="facility_10">
-			<label for="facility_name_10">Facility Name:<br></label>
-			<input type="text" name="facility_name_10" id="facility_name_10" value="" placeholder="Facility Name"/>
-			<input type="text" name="facility_addr_10" id="facility_addr_10" value="" placeholder="Facility Address"/>
-			<input type="text" name="facility_city_10" id="facility_city_10" value="" placeholder="City" />
-			<label for="facility_state_10">State</label>
-			<input type="text" name="facility_state_10" id="facility_state_10" value="" />
-			<input type="text" name="facility_zip_10" id="facility_zip_10" value="" placeholder="Zip Code"/>
-		</fieldset>
+		<script>
+			jQuery(document).ready(function($){
+				if ($('input[name="quantity"]').val() == 1) {
+					$('#facility_1').nextAll().hide();
+				}
+				$('input[name="quantity"]').change(function(){
+					var item_count = $('input[name="quantity"]').val();
+						$('#facility_'+item_count).prevAll().show();
+						$('#facility_'+item_count).show();
+						$('#facility_'+item_count).nextAll().hide();
+				});
+				$('fieldset input').click(function(){
+					$(this).attr('placeholder',"");
+				})
+			});
+		</script>
+		<div style="clear: both;"></div>
 		<?php
-	}
+		for ($i = 1; $i <= 10; $i++) { ?>
+		
+		<fieldset id="facility_<?php echo $i; ?>" style="margin-top: 10px;clear: both;">
+			
+			<input type="text" name="facility_name_<?php echo $i; ?>" id="facility_name_<?php echo $i; ?>" value="" placeholder="Facility Name"/>
+			<input type="text" name="facility_addr_<?php echo $i; ?>" id="facility_addr_<?php echo $i; ?>" value="" placeholder="Facility Address"/>
+			<input type="text" name="facility_city_<?php echo $i; ?>" id="facility_city_<?php echo $i; ?>" value="" placeholder="City" />
+			<input type="text" name="facility_state_<?php echo $i; ?>" id="facility_state_<?php echo $i; ?>" value="" size="3" placeholder="State"/>
+			<input type="text" name="facility_zip_<?php echo $i; ?>" id="facility_zip_<?php echo $i; ?>" value="" placeholder="Zip Code"/>
+		</fieldset>
+
+	<?php }
+}
+
 
 	/**
 	 * When added to cart, save any data
@@ -142,70 +81,15 @@ class WC_Custom_Sub {
 	 * @return void
 	 */
 	public function add_cart_item_data( $cart_item_meta, $product_id ) {
-		
-		if ( ! empty( $_POST['facility_name_1'] )) {
-			$cart_item_meta['facility_name_1'] = $_POST['facility_name_1'];
-			$cart_item_meta['facility_addr_1'] = $_POST['facility_addr_1'];
-			$cart_item_meta['facility_city_1'] = $_POST['facility_city_1'];
-			$cart_item_meta['facility_state_1'] = $_POST['facility_state_1'];
-			$cart_item_meta['facility_zip_1'] = $_POST['facility_zip_1'];
+		for ($i = 1; $i <= 10; $i++) {
+			if ( ! empty( $_POST['facility_name_'.$i] )) {
+			$cart_item_meta['facility_name_'.$i] = $_POST['facility_name_'.$i];
+			$cart_item_meta['facility_addr_'.$i] = $_POST['facility_addr_'.$i];
+			$cart_item_meta['facility_city_'.$i] = $_POST['facility_city_'.$i];
+			$cart_item_meta['facility_state_'.$i] = $_POST['facility_state_'.$i];
+			$cart_item_meta['facility_zip_'.$i] = $_POST['facility_zip_'.$i];
+			}
 		}
-		if ( ! empty( $_POST['facility_name_2'] )) {
-			$cart_item_meta['facility_name_2'] = $_POST['facility_name_2'];
-			$cart_item_meta['facility_addr_2'] = $_POST['facility_addr_2'];
-			$cart_item_meta['facility_city_2'] = $_POST['facility_city_2'];
-			$cart_item_meta['facility_state_2'] = $_POST['facility_state_2'];
-			$cart_item_meta['facility_zip_2'] = $_POST['facility_zip_2'];
-		}
-		if ( ! empty( $_POST['facility_name_3'] )) {
-			$cart_item_meta['facility_name_3'] = $_POST['facility_name_3'];
-			$cart_item_meta['facility_addr_3'] = $_POST['facility_addr_3'];
-			$cart_item_meta['facility_city_3'] = $_POST['facility_city_3'];
-			$cart_item_meta['facility_state_3'] = $_POST['facility_state_3'];
-			$cart_item_meta['facility_zip_3'] = $_POST['facility_zip_3'];		}
-		if ( ! empty( $_POST['facility_name_4'] )) {
-			$cart_item_meta['facility_name_4'] = $_POST['facility_name_4'];
-			$cart_item_meta['facility_addr_4'] = $_POST['facility_addr_4'];
-			$cart_item_meta['facility_city_4'] = $_POST['facility_city_4'];
-			$cart_item_meta['facility_state_4'] = $_POST['facility_state_4'];
-			$cart_item_meta['facility_zip_4'] = $_POST['facility_zip_4'];
-		}
-		if ( ! empty( $_POST['facility_name_5'] )) {
-			$cart_item_meta['facility_name_5'] = $_POST['facility_name_5'];
-			$cart_item_meta['facility_addr_5'] = $_POST['facility_addr_5'];
-			$cart_item_meta['facility_city_5'] = $_POST['facility_city_5'];
-			$cart_item_meta['facility_state_5'] = $_POST['facility_state_5'];
-			$cart_item_meta['facility_zip_5'] = $_POST['facility_zip_5'];		}
-		if ( ! empty( $_POST['facility_name_6'] )) {
-			$cart_item_meta['facility_name_6'] = $_POST['facility_name_6'];
-			$cart_item_meta['facility_addr_6'] = $_POST['facility_addr_6'];
-			$cart_item_meta['facility_city_6'] = $_POST['facility_city_6'];
-			$cart_item_meta['facility_state_6'] = $_POST['facility_state_6'];
-			$cart_item_meta['facility_zip_6'] = $_POST['facility_zip_6'];		}
-		if ( ! empty( $_POST['facility_name_7'] )) {
-			$cart_item_meta['facility_name_7'] = $_POST['facility_name_7'];
-			$cart_item_meta['facility_addr_7'] = $_POST['facility_addr_7'];
-			$cart_item_meta['facility_city_7'] = $_POST['facility_city_7'];
-			$cart_item_meta['facility_state_7'] = $_POST['facility_state_7'];
-			$cart_item_meta['facility_zip_7'] = $_POST['facility_zip_7'];		}
-		if ( ! empty( $_POST['facility_name_8'] )) {
-			$cart_item_meta['facility_name_8'] = $_POST['facility_name_8'];
-			$cart_item_meta['facility_addr_8'] = $_POST['facility_addr_8'];
-			$cart_item_meta['facility_city_8'] = $_POST['facility_city_8'];
-			$cart_item_meta['facility_state_8'] = $_POST['facility_state_8'];
-			$cart_item_meta['facility_zip_8'] = $_POST['facility_zip_8'];		}
-		if ( ! empty( $_POST['facility_name_9'] )) {
-			$cart_item_meta['facility_name_9'] = $_POST['facility_name_9'];
-			$cart_item_meta['facility_addr_9'] = $_POST['facility_addr_9'];
-			$cart_item_meta['facility_city_9'] = $_POST['facility_city_9'];
-			$cart_item_meta['facility_state_9'] = $_POST['facility_state_9'];
-			$cart_item_meta['facility_zip_9'] = $_POST['facility_zip_9'];		}
-		if ( ! empty( $_POST['facility_name_10'] )) {
-			$cart_item_meta['facility_name_10'] = $_POST['facility_name_10'];
-			$cart_item_meta['facility_addr_10'] = $_POST['facility_addr_10'];
-			$cart_item_meta['facility_city_10'] = $_POST['facility_city_10'];
-			$cart_item_meta['facility_state_10'] = $_POST['facility_state_10'];
-			$cart_item_meta['facility_zip_10'] = $_POST['facility_zip_10'];		}
 
 		return $cart_item_meta;
 	}
@@ -219,78 +103,16 @@ class WC_Custom_Sub {
 	 * @return void
 	 */
 	public function get_cart_item_from_session( $cart_item, $values ) {
-
-		if ( ! empty( $values['facility_name_1'] ) ) {
-			$cart_item_meta['facility_name_1'] = $values['facility_name_1'];
-			$cart_item_meta['facility_addr_1'] = $values['facility_addr_1'];
-			$cart_item_meta['facility_city_1'] = $values['facility_city_1'];
-			$cart_item_meta['facility_state_1'] = $values['facility_state_1'];
-			$cart_item_meta['facility_zip_1'] = $values['facility_zip_1'];
+		for ($i = 1; $i <= 10; $i++) {
+			if ( ! empty( $values['facility_name_'.$i] ) ) {
+				$cart_item['facility_name_'.$i] = $values['facility_name_'.$i];
+				$cart_item['facility_addr_'.$i] = $values['facility_addr_'.$i];
+				$cart_item['facility_city_'.$i] = $values['facility_city_'.$i];
+				$cart_item['facility_state_'.$i] = $values['facility_state_'.$i];
+				$cart_item['facility_zip_'.$i] = $values['facility_zip_'.$i];
+			}
 		}
-		if ( ! empty( $values['facility_name_2'] ) ) {
-			$cart_item_meta['facility_name_2'] = $values['facility_name_2'];
-			$cart_item_meta['facility_addr_2'] = $values['facility_addr_2'];
-			$cart_item_meta['facility_city_2'] = $values['facility_city_2'];
-			$cart_item_meta['facility_state_2'] = $values['facility_state_2'];
-			$cart_item_meta['facility_zip_2'] = $values['facility_zip_2'];
-		}
-		if ( ! empty( $values['facility_name_3'] ) ) {
-			$cart_item_meta['facility_name_3'] = $values['facility_name_3'];
-			$cart_item_meta['facility_addr_3'] = $values['facility_addr_3'];
-			$cart_item_meta['facility_city_3'] = $values['facility_city_3'];
-			$cart_item_meta['facility_state_3'] = $values['facility_state_3'];
-			$cart_item_meta['facility_zip_3'] = $values['facility_zip_3'];
-		}
-		if ( ! empty( $values['facility_name_4'] ) ) {
-			$cart_item_meta['facility_name_4'] = $values['facility_name_4'];
-			$cart_item_meta['facility_addr_4'] = $values['facility_addr_4'];
-			$cart_item_meta['facility_city_4'] = $values['facility_city_4'];
-			$cart_item_meta['facility_state_4'] = $values['facility_state_4'];
-			$cart_item_meta['facility_zip_4'] = $values['facility_zip_4'];
-		}
-		if ( ! empty( $values['facility_name_5'] ) ) {
-			$cart_item_meta['facility_name_5'] = $values['facility_name_5'];
-			$cart_item_meta['facility_addr_5'] = $values['facility_addr_5'];
-			$cart_item_meta['facility_city_5'] = $values['facility_city_5'];
-			$cart_item_meta['facility_state_5'] = $values['facility_state_5'];
-			$cart_item_meta['facility_zip_5'] = $values['facility_zip_5'];
-		}
-		if ( ! empty( $values['facility_name_6'] ) ) {
-			$cart_item_meta['facility_name_6'] = $values['facility_name_6'];
-			$cart_item_meta['facility_addr_6'] = $values['facility_addr_6'];
-			$cart_item_meta['facility_city_6'] = $values['facility_city_6'];
-			$cart_item_meta['facility_state_6'] = $values['facility_state_6'];
-			$cart_item_meta['facility_zip_6'] = $values['facility_zip_6'];
-		}
-		if ( ! empty( $values['facility_name_7'] ) ) {
-			$cart_item_meta['facility_name_7'] = $values['facility_name_7'];
-			$cart_item_meta['facility_addr_7'] = $values['facility_addr_7'];
-			$cart_item_meta['facility_city_7'] = $values['facility_city_7'];
-			$cart_item_meta['facility_state_7'] = $values['facility_state_7'];
-			$cart_item_meta['facility_zip_7'] = $values['facility_zip_7'];
-		}
-		if ( ! empty( $values['facility_name_8'] ) ) {
-			$cart_item_meta['facility_name_8'] = $values['facility_name_8'];
-			$cart_item_meta['facility_addr_8'] = $values['facility_addr_8'];
-			$cart_item_meta['facility_city_8'] = $values['facility_city_8'];
-			$cart_item_meta['facility_state_8'] = $values['facility_state_8'];
-			$cart_item_meta['facility_zip_8'] = $values['facility_zip_8'];
-		}
-		if ( ! empty( $values['facility_name_9'] ) ) {
-			$cart_item_meta['facility_name_9'] = $values['facility_name_9'];
-			$cart_item_meta['facility_addr_9'] = $values['facility_addr_9'];
-			$cart_item_meta['facility_city_9'] = $values['facility_city_9'];
-			$cart_item_meta['facility_state_9'] = $values['facility_state_9'];
-			$cart_item_meta['facility_zip_9'] = $values['facility_zip_9'];
-		}
-		if ( ! empty( $values['facility_name_10'] ) ) {
-			$cart_item_meta['facility_name_10'] = $values['facility_name_10'];
-			$cart_item_meta['facility_addr_10'] = $values['facility_addr_10'];
-			$cart_item_meta['facility_city_10'] = $values['facility_city_10'];
-			$cart_item_meta['facility_state_10'] = $values['facility_state_10'];
-			$cart_item_meta['facility_zip_10'] = $values['facility_zip_10'];
-		}
-
+		
 		return $cart_item;
 	}
 
@@ -303,23 +125,52 @@ class WC_Custom_Sub {
 	 * @return void
 	 */
 	public function get_item_data( $item_data, $cart_item ) {
-		if ( ! empty( $cart_item['facility_name_1'] ) ) {
-			$facility1 = $cart_item['facility_name_1'];
-			$item_data[] = array(
-				'name'    => __( 'Facility Name 1', 'woocommerce-custom-subscription-fields' ),
-				'value'   => __( $facility1, 'woocommerce-custom-subscription-fields' ),
-				'display' => __( $facility1, 'woocommerce-custom-subscription-fields' )
-			);
+		for ($i = 1; $i <= 10; $i++) {
+			if ( ! empty( $cart_item['facility_name_'.$i] ) ) {
+				$facilityname = $cart_item['facility_name_'.$i];
+				$item_data[] = array(
+					'name'    => __( 'Facility Name '.$i, 'woocommerce-custom-subscription-fields' ),
+					'value'   => __( $facilityname, 'woocommerce-custom-subscription-fields' ),
+					'display' => __( $facilityname, 'woocommerce-custom-subscription-fields' )
+				);
+			}
+			if ( ! empty( $cart_item['facility_addr_'.$i] ) ) {
+				$facilityaddr = $cart_item['facility_addr_'.$i];
+					$item_data[] = array(
+					'name'    => __( 'Facility Address '.$i, 'woocommerce-custom-subscription-fields' ),
+					'value'   => __( $facilityaddr, 'woocommerce-custom-subscription-fields' ),
+					'display' => __( $facilityaddr, 'woocommerce-custom-subscription-fields' )
+				);
+			}
+			if ( ! empty( $cart_item['facility_city_'.$i] ) ) {
+				$facilitycity = $cart_item['facility_city_'.$i];
+					$item_data[] = array(
+					'name'    => __( 'Facility City '.$i, 'woocommerce-custom-subscription-fields' ),
+					'value'   => __( $facilitycity, 'woocommerce-custom-subscription-fields' ),
+					'display' => __( $facilitycity, 'woocommerce-custom-subscription-fields' )
+				);
+			}
+			if ( ! empty( $cart_item['facility_state_'.$i] ) ) {
+				$facilitystate = $cart_item['facility_state_'.$i];
+					$item_data[] = array(
+					'name'    => __( 'Facility State '.$i, 'woocommerce-custom-subscription-fields' ),
+					'value'   => __( $facilitystate, 'woocommerce-custom-subscription-fields' ),
+					'display' => __( $facilitystate, 'woocommerce-custom-subscription-fields' )
+				);
+			}
+			if ( ! empty( $cart_item['facility_zip_'.$i] ) ) {
+				$facilityzip = $cart_item['facility_zip_'.$i];
+						$item_data[] = array(
+					'name'    => __( 'Facility Zip '.$i, 'woocommerce-custom-subscription-fields' ),
+					'value'   => __( $facilityzip, 'woocommerce-custom-subscription-fields' ),
+					'display' => __( $facilityzip, 'woocommerce-custom-subscription-fields' )
+				);
+			}
+			
 		}
-		if ( ! empty( $cart_item['facility_name_8'] ) ) {
-			$facility8 = $cart_item['facility_name_8'];
-			$item_data[] = array(
-				'name'    => __( 'Facility Name 8', 'woocommerce-custom-subscription-fields' ),
-				'value'   => __( $facility8, 'woocommerce-custom-subscription-fields' ),
-				'display' => __( $facility8, 'woocommerce-custom-subscription-fields' )
-			);
-		}
+		
 		return $item_data;
+		
 	}
 
 	
@@ -333,8 +184,14 @@ class WC_Custom_Sub {
 	 * @return void
 	 */
 	public function add_order_item_meta( $item_id, $cart_item ) {
-		if ( ! empty( $cart_item['facility_name_1'] ) ) {
-			woocommerce_add_order_item_meta( $item_id, __( 'Facility Name 1', 'woocommerce-custom-subscription-fields' ), __( $family, 'woocommerce-product-family' ) );
+		for ($i = 1; $i <= 10; $i++) {
+			if ( ! empty( $cart_item['facility_name_'.$i] ) ) {
+				woocommerce_add_order_item_meta( $item_id, __( 'Facility Name '.$i, 'woocommerce-custom-subscription-fields' ), __( $cart_item['facility_name_'.$i], 'woocommerce-custom-subscription-fields' ) );
+				woocommerce_add_order_item_meta( $item_id, __( 'Facility Address '.$i, 'woocommerce-custom-subscription-fields' ), __( $cart_item['facility_addr_'.$i], 'woocommerce-custom-subscription-fields' ) );
+				woocommerce_add_order_item_meta( $item_id, __( 'Facility City '.$i, 'woocommerce-custom-subscription-fields' ), __( $cart_item['facility_city_'.$i], 'woocommerce-custom-subscription-fields' ) );
+				woocommerce_add_order_item_meta( $item_id, __( 'Facility State '.$i, 'woocommerce-custom-subscription-fields' ), __( $cart_item['facility_state_'.$i], 'woocommerce-custom-subscription-fields' ) );
+				woocommerce_add_order_item_meta( $item_id, __( 'Facility Zip Code '.$i, 'woocommerce-custom-subscription-fields' ), __( $cart_item['facility_zip_'.$i], 'woocommerce-custom-subscription-fields' ) );
+			}
 		}
 	}
 
@@ -346,28 +203,58 @@ class WC_Custom_Sub {
 	 */
 	public function write_panel() {
 		global $post;
-
+		for ($i = 1; $i <= 10; $i++) {
 		
 
 		woocommerce_wp_hidden_input( 
-			array(
-				'id'          => 'facility_name_1',
-				'label'       => __( 'Facility Name 1 ', 'woocommerce-custom-subscription-fields' ),
-				'placeholder' => __( 'Facility Name 1', 'woocommerce-custom-subscription-fields' ),
-				'desc_tip'    => true,
-				'description' => __( 'Facility Name 1', 'woocommerce-custom-subscription-fields' ),
-			),
-			array(
-				'id'          => 'facility_name_2',
-				'label'       => __( 'Facility Name 2 ', 'woocommerce-custom-subscription-fields' ),
-				'placeholder' => __( 'Facility Name 2', 'woocommerce-custom-subscription-fields' ),
-				'desc_tip'    => true,
-				'description' => __( 'Facility Name 2', 'woocommerce-custom-subscription-fields' ),
-			)
+			
+				array(
+					'id'          => 'facility_name_'.$i,
+					'label'       => __( 'Facility Name '.$i, 'woocommerce-custom-subscription-fields' ),
+					'placeholder' => __( 'Facility Name '.$i, 'woocommerce-custom-subscription-fields' ),
+					'desc_tip'    => true,
+					'description' => __( 'Facility Name '.$i, 'woocommerce-custom-subscription-fields' ),
+				)
+		);
+		woocommerce_wp_hidden_input(
+				array(
+					'id'          => 'facility_addr_'.$i,
+					'label'       => __( 'Facility Address '.$i, 'woocommerce-custom-subscription-fields' ),
+					'placeholder' => __( 'Facility Address '.$i, 'woocommerce-custom-subscription-fields' ),
+					'desc_tip'    => true,
+					'description' => __( 'Facility Address '.$i, 'woocommerce-custom-subscription-fields' ),
+				)
+		);
+		woocommerce_wp_hidden_input(
+				array(
+					'id'          => 'facility_city_'.$i,
+					'label'       => __( 'Facility City '.$i, 'woocommerce-custom-subscription-fields' ),
+					'placeholder' => __( 'Facility City '.$i, 'woocommerce-custom-subscription-fields' ),
+					'desc_tip'    => true,
+					'description' => __( 'Facility City '.$i, 'woocommerce-custom-subscription-fields' ),
+				)
+		);
+		woocommerce_wp_hidden_input(
+				array(
+					'id'          => 'facility_state_'.$i,
+					'label'       => __( 'Facility State '.$i, 'woocommerce-custom-subscription-fields' ),
+					'placeholder' => __( 'Facility State '.$i, 'woocommerce-custom-subscription-fields' ),
+					'desc_tip'    => true,
+					'description' => __( 'Facility State '.$i, 'woocommerce-custom-subscription-fields' ),
+				)
+		);
+		woocommerce_wp_hidden_input(
+				array(
+					'id'          => 'facility_zip_'.$i,
+					'label'       => __( 'Facility Zip Code '.$i, 'woocommerce-custom-subscription-fields' ),
+					'placeholder' => __( 'Facility Zip Code '.$i, 'woocommerce-custom-subscription-fields' ),
+					'desc_tip'    => true,
+					'description' => __( 'Facility Zip Code '.$i, 'woocommerce-custom-subscription-fields' ),
+				)
 			
 		);
-
-		
+	 	
+		}
 	}
 
 	/**
@@ -378,10 +265,23 @@ class WC_Custom_Sub {
 	 * @return void
 	 */
 	public function write_panel_save( $post_id ) {
-		$facility_name_1 = ! empty( $_POST['facility_name_1'] );
+		for ($i = 1; $i <= 10; $i++) {
+			$facility_name = ! empty( $_POST['facility_name'.$i] );
+			update_post_meta( $post_id, 'facility_name_'.$i, $facility_name );
 
-		update_post_meta( $post_id, 'facility_name_1', $product_family );
-	}
+			$facility_addr = ! empty( $_POST['facility_addr'.$i] );
+			update_post_meta( $post_id, 'facility_addr_'.$i, $facility_addr );
+
+			$facility_city = ! empty( $_POST['facility_city'.$i] );
+			update_post_meta( $post_id, 'facility_city_'.$i, $facility_city );
+
+			$facility_state = ! empty( $_POST['facility_state'.$i] );
+			update_post_meta( $post_id, 'facility_state_'.$i, $facility_state );
+
+			$facility_zip = ! empty( $_POST['facility_zip'.$i] );
+			update_post_meta( $post_id, 'facility_zip_'.$i, $facility_zip );
+		}
+}
 
 	
 }
